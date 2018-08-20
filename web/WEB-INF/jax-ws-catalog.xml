@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://10.8.0.134:1112/FCUBSSIService/FCUBSSIService?wsdl" uri="wsdl/10.8.0.134_1112/FCUBSSIService/FCUBSSIService.wsdl"/>
+    <system systemId="http://10.8.0.134:1112/FCUBSSIService/FCUBSSIService?xsd=1" uri="wsdl/10.8.0.134_1112/FCUBSSIService/FCUBSSIService.xsd_1.xsd"/>
+    <system systemId="http://10.8.0.134:1112/FCUBSLDService/FCUBSLDService?wsdl" uri="wsdl/10.8.0.134_1112/FCUBSLDService/FCUBSLDService.wsdl"/>
+    <system systemId="http://10.8.0.134:1112/FCUBSLDService/FCUBSLDService?xsd=1" uri="wsdl/10.8.0.134_1112/FCUBSLDService/FCUBSLDService.xsd_1.xsd"/>
+    <system systemId="http://10.8.0.134:1112/FCUBSCustomerService/FCUBSCustomerService?wsdl" uri="wsdl/10.8.0.134_1112/FCUBSCustomerService/FCUBSCustomerService.wsdl"/>
+    <system systemId="http://10.8.0.134:1112/FCUBSCustomerService/FCUBSCustomerService?xsd=1" uri="wsdl/10.8.0.134_1112/FCUBSCustomerService/FCUBSCustomerService.xsd_1.xsd"/>
+    <system systemId="http://10.8.0.134:1112/FCUBSAccService/FCUBSAccService?wsdl" uri="wsdl/10.8.0.134_1112/FCUBSAccService/FCUBSAccService.wsdl"/>
+    <system systemId="http://10.8.0.134:1112/FCUBSAccService/FCUBSAccService?xsd=1" uri="wsdl/10.8.0.134_1112/FCUBSAccService/FCUBSAccService.xsd_1.xsd"/>
+    <system systemId="http://10.8.0.134:1112/FCUBSSMService/FCUBSSMService?WSDL" uri="wsdl/10.8.0.134_1112/FCUBSSMService/FCUBSSMService.wsdl"/>
+    <system systemId="http://10.8.0.134:1112/FCUBSSMService/FCUBSSMService?xsd=1" uri="wsdl/10.8.0.134_1112/FCUBSSMService/FCUBSSMService.xsd_1.xsd"/>
+    <system systemId="http://10.65.0.123:9080/EmailGateway/EmailService" uri="wsdl/10.65.0.123_9080/emailgateway/emailservice.xml"/>
+    <system systemId="http://10.65.0.123:9080/EmailGateway/EmailService?wsdl" uri="wsdl/10.65.0.123_9080/EmailGateway/EmailService.wsdl"/>
+    <system systemId="http://10.65.0.123:9080/EmailGateway/EmailService?xsd=1" uri="wsdl/10.65.0.123_9080/EmailGateway/EmailService.xsd_1.xsd"/>
+</catalog>

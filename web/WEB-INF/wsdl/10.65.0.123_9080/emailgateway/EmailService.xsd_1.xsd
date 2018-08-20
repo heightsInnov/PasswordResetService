@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.3 (tags/2.3-7528; 2013-04-29T19:34:10+0000) JAXWS-RI/2.2.8 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://email.notifications.unionbankng.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://email.notifications.unionbankng.com/">
+
+<xs:element name="sendEmail" type="tns:sendEmail"/>
+
+<xs:element name="sendEmailResponse" type="tns:sendEmailResponse"/>
+
+<xs:element name="sendEmailSync" type="tns:sendEmailSync"/>
+
+<xs:element name="sendEmailSyncResponse" type="tns:sendEmailSyncResponse"/>
+
+<xs:complexType name="sendEmail">
+<xs:sequence>
+<xs:element name="emailReq" type="tns:emailBodyDto" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="emailBodyDto">
+<xs:sequence>
+<xs:element name="attachments" type="tns:emailAttachmentDto" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="body" type="xs:string" minOccurs="0"/>
+<xs:element name="footer" type="xs:string" minOccurs="0"/>
+<xs:element name="recipients" type="tns:emailAddressDto" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="sender" type="tns:emailAddressDto" minOccurs="0"/>
+<xs:element name="subject" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="emailAttachmentDto">
+<xs:sequence>
+<xs:element name="cid" type="xs:string" minOccurs="0"/>
+<xs:element name="content" type="xs:string" minOccurs="0"/>
+<xs:element name="inline" type="xs:boolean"/>
+<xs:element name="mime" type="xs:string" minOccurs="0"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="emailAddressDto">
+<xs:sequence>
+<xs:element name="displayName" type="xs:string" minOccurs="0"/>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="recipientType" type="tns:recipientType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sendEmailResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseDto" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="responseDto">
+<xs:sequence>
+<xs:element name="code" type="xs:string" minOccurs="0"/>
+<xs:element name="description" type="xs:string" minOccurs="0"/>
+<xs:element name="reference" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sendEmailSync">
+<xs:sequence>
+<xs:element name="emailReq" type="tns:emailBodyDto" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sendEmailSyncResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseDto" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:simpleType name="recipientType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="TO"/>
+<xs:enumeration value="CC"/>
+<xs:enumeration value="BCC"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:schema>

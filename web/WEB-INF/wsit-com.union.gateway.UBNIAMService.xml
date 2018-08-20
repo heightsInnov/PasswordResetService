@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+ <definitions 
+ xmlns="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="UBNIAMServiceService" targetNamespace="http://gateway.union.com/" xmlns:tns="http://gateway.union.com/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sc="http://schemas.sun.com/2006/03/wss/server" xmlns:wspp="http://java.sun.com/xml/ns/wsit/policy" 
+ >
+    <message name="userModification"/>
+    <message name="userModificationResponse"/>
+    <message name="createUserTills"/>
+    <message name="createUserTillsResponse"/>
+    <message name="queryUser"/>
+    <message name="queryUserResponse"/>
+    <message name="queryUserRoles"/>
+    <message name="queryUserRolesResponse"/>
+    <message name="createUserRoles"/>
+    <message name="createUserRolesResponse"/>
+    <message name="removeUserRoles"/>
+    <message name="removeUserRolesResponse"/>
+    <message name="createUserMaintenance"/>
+    <message name="createUserMaintenanceResponse"/>
+    <message name="queryRolesMaster"/>
+    <message name="queryRolesMasterResponse"/>
+    <message name="queryUserMaintenance"/>
+    <message name="queryUserMaintenanceResponse"/>
+    <portType name="UBNIAMService">
+        <operation name="userModification">
+            <input message="tns:userModification"/>
+            <output message="tns:userModificationResponse"/>
+        </operation>
+        <operation name="createUserTills">
+            <input message="tns:createUserTills"/>
+            <output message="tns:createUserTillsResponse"/>
+        </operation>
+        <operation name="queryUser">
+            <input message="tns:queryUser"/>
+            <output message="tns:queryUserResponse"/>
+        </operation>
+        <operation name="queryUserRoles">
+            <input message="tns:queryUserRoles"/>
+            <output message="tns:queryUserRolesResponse"/>
+        </operation>
+        <operation name="createUserRoles">
+            <input message="tns:createUserRoles"/>
+            <output message="tns:createUserRolesResponse"/>
+        </operation>
+        <operation name="removeUserRoles">
+            <input message="tns:removeUserRoles"/>
+            <output message="tns:removeUserRolesResponse"/>
+        </operation>
+        <operation name="createUserMaintenance">
+            <input message="tns:createUserMaintenance"/>
+            <output message="tns:createUserMaintenanceResponse"/>
+        </operation>
+        <operation name="queryRolesMaster">
+            <input message="tns:queryRolesMaster"/>
+            <output message="tns:queryRolesMasterResponse"/>
+        </operation>
+        <operation name="queryUserMaintenance">
+            <input message="tns:queryUserMaintenance"/>
+            <output message="tns:queryUserMaintenanceResponse"/>
+        </operation>
+    </portType>
+    <binding name="UBNIAMServicePortBinding" type="tns:UBNIAMService">
+        <operation name="userModification">
+            <input></input>
+            <output></output>
+        </operation>
+        <operation name="createUserTills">
+            <input></input>
+            <output></output>
+        </operation>
+        <operation name="queryUser">
+            <input></input>
+            <output></output>
+        </operation>
+        <operation name="queryUserRoles">
+            <input></input>
+            <output></output>
+        </operation>
+        <operation name="createUserRoles">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="removeUserRoles">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="createUserMaintenance">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="queryRolesMaster">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="queryUserMaintenance">
+            <input/>
+            <output/>
+        </operation>
+    </binding>
+    <service name="UBNIAMServiceService">
+        <port name="UBNIAMServicePort" binding="tns:UBNIAMServicePortBinding"/>
+    </service>
+    <wsp:Policy wsu:Id="UBNIAMServicePortBinding_CreateUserMaintenance_Input_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="UBNIAMServicePortBinding_CreateUserMaintenance_Output_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="UBNIAMServicePortBinding_QueryUserMaintainance_Input_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="UBNIAMServicePortBinding_QueryUserMaintainance_Output_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="UBNIAMServicePortBinding_queryUserMaintainance_Input_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="UBNIAMServicePortBinding_queryUserMaintainance_Output_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+</definitions>

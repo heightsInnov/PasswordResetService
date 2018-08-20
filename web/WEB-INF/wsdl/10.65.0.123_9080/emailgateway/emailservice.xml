@@ -1,0 +1,26 @@
+<html>
+<head><title>
+Web Services
+</title></head>
+<body>
+<h1>Web Services</h1>
+<table width='100%' border='1'>
+<tr>
+<td>
+Endpoint
+</td>
+<td>
+Information
+</td>
+</tr>
+<tr>
+<td>
+<table border="0"><tr><td>Service Name:</td><td>{http://email.notifications.unionbankng.com/}EmailService</td></tr><tr><td>Port Name:</td><td>{http://email.notifications.unionbankng.com/}EmailServicePort</td></tr></table>
+</td>
+<td>
+<table border="0"><tr><td>Address:</td><td>http://10.65.0.123:9080/EmailGateway/EmailService</td></tr><tr><td>WSDL:</td><td><a href="http://10.65.0.123:9080/EmailGateway/EmailService?wsdl">http://10.65.0.123:9080/EmailGateway/EmailService?wsdl</a></td></tr><tr><td>Implementation class:</td><td>com.unionbankng.notifications.email.EmailService</td></tr></table>
+</td>
+</tr>
+</table>
+</body>
+</html>
