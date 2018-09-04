@@ -5,6 +5,8 @@
  */
 package com.union.gateway;
 
+import com.union.bof.dao.ResetDao;
+import com.union.bof.dao.SecretDao;
 import com.unionbank.utilities.Encryptor;
 import com.unionbankng.notifications.email.EmailAddressDto;
 import com.unionbankng.notifications.email.EmailBodyDto;
@@ -554,6 +556,75 @@ public class SecurityProcessor {
 		return isValid;
 	}
 
+	public boolean saveReg(SecretDao sec) {
+		paramload();
+		Connection conn = null;
+		CallableStatement cll = null;
+		boolean isValid = false;
+		SecretDao sd = sec;
+		try {
+			Class.forName(driver).newInstance();
+			conn = DriverManager.getConnection(url, user, pass);
+
+			String query = "{? = call PASSWORDRESETPKG.SAVEREG(?,?,?,?,?,?,?,?,?,?,?,?)}";
+			cll = conn.prepareCall(query);
+			cll.registerOutParameter(1, OracleTypes.VARCHAR);
+			cll.setString(2, sd.getUsername());
+			cll.setString(3, sd.getSecret1());
+			cll.setString(4, sd.getSecret2());
+			cll.setString(5, sd.getSecret3());
+			cll.setString(6, sd.getSecret4());
+			cll.setString(7, sd.getSecret5());
+			cll.setString(8, sd.getAnswer1());
+			cll.setString(9, sd.getAnswer2());
+			cll.setString(10, sd.getAnswer3());
+			cll.setString(11, sd.getAnswer4());
+			cll.setString(12, sd.getAnswer5());
+			cll.setString(12, sd.getPass());
+
+			if (cll.executeUpdate() != Statement.EXECUTE_FAILED) {
+				String out = (String) cll.getString(1);
+				isValid = Boolean.valueOf(out);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return isValid;
+	}
+	
+	public boolean saveReset(ResetDao sec) {
+		paramload();
+		Connection conn = null;
+		CallableStatement cll = null;
+		boolean isValid = false;
+		ResetDao sd = sec;
+		try {
+			Class.forName(driver).newInstance();
+			conn = DriverManager.getConnection(url, user, pass);
+
+			String query = "{? = call PASSWORDRESETPKG.SAVERESET(?,?,?,?,?,?,?,?)}";
+			cll = conn.prepareCall(query);
+			cll.registerOutParameter(1, OracleTypes.VARCHAR);
+			cll.setString(2, sd.getUsername());
+			cll.setString(3, sd.getAnswer1());
+			cll.setString(4, sd.getAnswer2());
+			cll.setString(5, sd.getAnswer3());
+			cll.setString(6, sd.getQ1());
+			cll.setString(7, sd.getQ2());
+			cll.setString(8, sd.getQ3());
+			cll.setString(9, sd.getHashedpin());
+//			cll.setString(10, sd.getPassword());
+
+			if (cll.executeUpdate() != Statement.EXECUTE_FAILED) {
+				String out = (String) cll.getString(1);
+				isValid = Boolean.valueOf(out);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return isValid;
+	}
+	
 	public static void closeConns(Connection conn, PreparedStatement pstmt) {
 		try {
 			if (pstmt != null) {

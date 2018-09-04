@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
-    <system systemId="http://10.8.0.134:1112/FCUBSSIService/FCUBSSIService?wsdl" uri="src/conf/xml-resources/web-service-references/FCUBSSIService/wsdl/10.8.0.134_1112/FCUBSSIService/FCUBSSIService.wsdl"/>
-    <system systemId="http://10.8.0.134:1112/FCUBSSIService/FCUBSSIService?xsd=1" uri="src/conf/xml-resources/web-service-references/FCUBSSIService/wsdl/10.8.0.134_1112/FCUBSSIService/FCUBSSIService.xsd_1.xsd"/>
-    <system systemId="http://10.65.0.123:9080/EmailGateway/EmailService" uri="src/conf/xml-resources/web-service-references/EmailService_1/wsdl/10.65.0.123_9080/emailgateway/emailservice.xml"/>
-    <system systemId="http://10.8.0.134:1112/FCUBSAccService/FCUBSAccService?wsdl" uri="src/conf/xml-resources/web-service-references/FCUBSAccService/wsdl/10.8.0.134_1112/FCUBSAccService/FCUBSAccService.wsdl"/>
-    <system systemId="http://10.8.0.134:1112/FCUBSAccService/FCUBSAccService?xsd=1" uri="src/conf/xml-resources/web-service-references/FCUBSAccService/wsdl/10.8.0.134_1112/FCUBSAccService/FCUBSAccService.xsd_1.xsd"/>
-    <system systemId="http://10.8.0.134:1112/FCUBSLDService/FCUBSLDService?wsdl" uri="src/conf/xml-resources/web-service-references/FCUBSLDService/wsdl/10.8.0.134_1112/FCUBSLDService/FCUBSLDService.wsdl"/>
-    <system systemId="http://10.8.0.134:1112/FCUBSLDService/FCUBSLDService?xsd=1" uri="src/conf/xml-resources/web-service-references/FCUBSLDService/wsdl/10.8.0.134_1112/FCUBSLDService/FCUBSLDService.xsd_1.xsd"/>
-    <system systemId="http://10.8.0.134:1112/FCUBSCustomerService/FCUBSCustomerService?wsdl" uri="src/conf/xml-resources/web-service-references/FCUBSCustomerService/wsdl/10.8.0.134_1112/FCUBSCustomerService/FCUBSCustomerService.wsdl"/>
-    <system systemId="http://10.8.0.134:1112/FCUBSCustomerService/FCUBSCustomerService?xsd=1" uri="src/conf/xml-resources/web-service-references/FCUBSCustomerService/wsdl/10.8.0.134_1112/FCUBSCustomerService/FCUBSCustomerService.xsd_1.xsd"/>
-    <system systemId="http://10.8.0.134:1112/FCUBSSMService/FCUBSSMService?WSDL" uri="src/conf/xml-resources/web-service-references/FCUBSSMService/wsdl/10.8.0.134_1112/FCUBSSMService/FCUBSSMService.wsdl"/>
-    <system systemId="http://10.8.0.134:1112/FCUBSSMService/FCUBSSMService?xsd=1" uri="src/conf/xml-resources/web-service-references/FCUBSSMService/wsdl/10.8.0.134_1112/FCUBSSMService/FCUBSSMService.xsd_1.xsd"/>
     <system systemId="http://10.65.0.123:9080/EmailGateway/EmailService?wsdl" uri="src/conf/xml-resources/web-service-references/EmailService/wsdl/10.65.0.123_9080/EmailGateway/EmailService.wsdl"/>
     <system systemId="http://10.65.0.123:9080/EmailGateway/EmailService?xsd=1" uri="src/conf/xml-resources/web-service-references/EmailService/wsdl/10.65.0.123_9080/EmailGateway/EmailService.xsd_1.xsd"/>
 </catalog>

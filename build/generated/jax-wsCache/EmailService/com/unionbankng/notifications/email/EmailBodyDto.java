@@ -15,20 +15,20 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="emailBodyDto"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="attachments" type="{http://email.notifications.unionbankng.com/}emailAttachmentDto" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="body" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="footer" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="recipients" type="{http://email.notifications.unionbankng.com/}emailAddressDto" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="sender" type="{http://email.notifications.unionbankng.com/}emailAddressDto" minOccurs="0"/&gt;
- *         &lt;element name="subject" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="emailBodyDto">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="attachments" type="{http://email.notifications.unionbankng.com/}emailAttachmentDto" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="body" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="footer" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="recipients" type="{http://email.notifications.unionbankng.com/}emailAddressDto" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="sender" type="{http://email.notifications.unionbankng.com/}emailAddressDto" minOccurs="0"/>
+ *         &lt;element name="subject" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 
